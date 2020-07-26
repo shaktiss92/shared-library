@@ -9,7 +9,7 @@ def call(body) {
     stages {
         stage('verify') {
             steps {
-                deploy(name:'Hello',dayOfWeek:'Tues')
+                deploy(name:"${pipelineParams.name}",dayOfWeek:"${pipelineParams.dayOfWeek}")
             }
         }
     }
